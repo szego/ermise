@@ -17,9 +17,6 @@ create_project <- function(path, ...) {
   for(folder in c("analysis", "src", "data", "output", "doc", "ext"))
     dir.create(file.path(path, folder), recursive = TRUE, showWarnings = FALSE)
 
-  # Change the working directory to the recently created folder:
-  setwd(path)
-
   # Create the skeleton of a README.md
   writeLines(
     paste0(
@@ -33,6 +30,6 @@ create_project <- function(path, ...) {
       "- doc: Any long form documentation or set-up instructions\n\n",
       "- ext: Any miscellaneous external files or presentation material collected or created throughout the analysis\n"
     ),
-    "README.md"
+    file.path(path, "README.md")
   )
 }
