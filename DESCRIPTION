@@ -1,12 +1,12 @@
 Package: ermise
 Title: Mise en Place for Analysis Projects
-Version: 0.0.0.9000
+Version: 0.1
 Authors@R: 
     person(given = "Antonio R.",
            family = "Vargas",
            role = c("aut", "cre"),
            email = "antonio.ravon.vargas@gmail.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+             comment = c(ORCID = "0000-0002-1198-4856"))
 Description: A project template for data analyses based on Emily Riederer's file structure.
 License: GPL (>= 3)
 Encoding: UTF-8
