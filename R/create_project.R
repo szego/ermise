@@ -2,7 +2,7 @@
 #'
 #' Create a new data processing or analysis project.
 #'
-#' The file structure in this template was created by Emily Riederer:
+#' The file structure in this template is based on one created by Emily Riederer:
 #' https://emilyriederer.netlify.app/post/team-of-packages/
 #'
 #' @param path Location of the new project.
@@ -14,22 +14,30 @@ create_project <- function(path, ...) {
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
 
   # Create project subfolders
-  for(folder in c("analysis", "src", "data", "output", "doc", "ext"))
+  for(folder in c("analysis", "src", "data", "save", "doc", "publish"))
     dir.create(file.path(path, folder), recursive = TRUE, showWarnings = FALSE)
 
   # Create the skeleton of a README.md
   writeLines(
-    paste0(
-      "\n# [title]\n\n-----\n\n[description]\n\n-----\n\n",
-      "Project created on ", Sys.Date(), ".\n\n",
-      "Folder legend:\n\n",
-      "- analysis: RMarkdown files that constitute the final data processing or analysis\n\n",
-      "- src: R scripts that contain useful helper functions or other set-up tasks (e.g. data pulls)\n\n",
-      "- data: Raw data - this folder should be considered read only!\n\n",
-      "- output: Intermediate data objects created in the analysis\n\n",
-      "- doc: Any long form documentation or set-up instructions\n\n",
-      "- ext: Any miscellaneous external files or presentation material collected or created throughout the analysis\n"
+    c(
+      "\n# [Title]",
+      "-----",
+      "[Description]",
+      "-----",
+      paste0("Project created on ", Sys.Date(), "."),
+      "Folder legend:",
+      "- analysis: RMarkdown files that constitute the final data processing or analysis",
+      "- src: R scripts that contain useful helper functions or other set-up tasks (e.g. data pulls)",
+      "- data: Raw data - this folder should be considered read only!",
+      "- save: Intermediate data objects created during the analysis",
+      "- doc: Any long-form documentation or setup instructions",
+      "- publish: Any files created by the analysis to be used outside of the project"
     ),
-    file.path(path, "README.md")
+    file.path(path, "README.md"),
+    sep = "\n\n"
   )
+
+  writeLines("", file.path(path, ".here"))
+
+  writeLines("here", file.path(path, "required_packages.txt"))
 }

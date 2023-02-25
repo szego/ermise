@@ -15,6 +15,6 @@ create_project(path, ...)
 Create a new data processing or analysis project.
 }
 \details{
-The file structure in this template was created by Emily Riederer:
+The file structure in this template is based on one created by Emily Riederer:
 https://emilyriederer.netlify.app/post/team-of-packages/
 }
