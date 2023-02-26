@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This R package is a set of tools and workflow enhancements for data processing or analysis projects.
+This R package is a set of tools and workflow enhancements for data processing and analysis projects.
 
 Core features:
 - Create projects with a folder structure geared toward data processing and analysis using RStudio's New Project wizard (`File > New Project...`) or `ermise::create_project()`
