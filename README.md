@@ -14,7 +14,7 @@ Core features:
 
 The template's folder structure is based on one recommended by [Emily Riederer](https://emilyriederer.netlify.app/post/team-of-packages/).
 
-### Create a new project
+## Create a new project
 
 After installing this package, use Rstudio's New Project wizard (`File > New Project...`) to create a new "ermise Project". ermise will create some folders in the project directory:
 
