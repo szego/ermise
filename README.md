@@ -17,7 +17,9 @@ The template's folder structure is based on one recommended by [Emily Riederer](
 ### Create a new project
 
 After installing this package, use Rstudio's New Project wizard (`File > New Project...`) to create a new "ermise Project". ermise will create some folders in the project directory:
+
 ![RStudio's New Project wizard and ermise folder structure](/inst/readme_imgs/new_project.png)
+
 You can also create the project without RStudio by calling `ermise::create_project()` directly.
 
 The created folders are:
@@ -50,6 +52,7 @@ For example, run the following line to create a new analysis R Notebook:
 ermise::new_analysis("Summary of hospital totals")
 ```
 This creates a new file in /analysis/ called "summary_of_hospital_totals.Rmd". Assuming we already ran the code above to add `dplyr` and `tidyr` to "required_packages.txt", that new file would look like this:
+
 ![An .Rmd file with the provided title, a place to enter a description, and a setup chunk containing library() calls to packages from required_packages.txt](/inst/readme_imgs/new_analysis.png)
 
 Create a new R source file for a helper function using `ermise::new_src()`. This will create a new .R folder in /src/ with a simple code template for the helper function.
@@ -59,7 +62,9 @@ For example, run the following line to create a new source file:
 ermise::new_src("clean_hospital_names")
 ```
 This creates a new file in /src/ called "clean_hospital_names.R" that looks like this:
+
 ![An .R file with a function template for a function called clean_hospital_names()](/inst/readme_imgs/new_src.png)
+
 The comment block above the function follows [roxygen2](https://roxygen2.r-lib.org/) formatting.
 
 ## Installation
