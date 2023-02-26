@@ -16,7 +16,7 @@ The template's folder structure is based on one recommended by [Emily Riederer](
 
 ### Create a new project
 
-After installing this package, use the Rstudio's New Project wizard (`File > New Project...`) to create a new "ermise Project". ermise will create some folders in the project directory:
+After installing this package, use Rstudio's New Project wizard (`File > New Project...`) to create a new "ermise Project". ermise will create some folders in the project directory:
 ![RStudio's New Project wizard and ermise folder structure](/inst/readme_imgs/new_project.png)
 You can also create the project without RStudio by calling `ermise::create_project()` directly.
 
@@ -70,7 +70,7 @@ You can install ermise directly from GitHub using the [devtools](https://cran.r-
 devtools::install_github("szego/ermise")
 ```
 
-After installing, create a new "ermise Project" using RStudio's new project wizard (`File > New Project...`).
+After installing, create a new "ermise Project" using RStudio's New Project wizard (`File > New Project...`).
 
 -----
 
